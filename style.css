@@ -32,20 +32,26 @@ body {
   color: var(--grey-dark);
 }
 section {
-  margin-top: 5rem;
+  /* margin: 10rem 0; */
 }
 .section-center {
-  width: 90vh;
-  max-width: 170rem;
+    padding: 8rem;
   margin: 0 auto;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   color: var(--color-white);
   text-align: center;
+  margin-bottom: 3rem;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 p {
-  color: white;
+  /* color: white; */
+  padding-bottom: 2rem;
+  text-align: center;
 }
 .btn {
   padding: 0.6rem 0.8rem;
@@ -56,6 +62,7 @@ p {
   background-color: var(--btn-color);
   border-radius: 1.5rem;
   display: inline-block;
+  transition: all 0.3s ease-in;
 }
 .btn:hover {
   background-color: var(--btn-hover);
@@ -129,16 +136,139 @@ header
 */
 .header {
   background-color: blue;
-  height: 70vh;
+  height: 80vh;
   padding: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: -5rem;
+  background-image: url('./img/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .header .btn {
   text-align: left;
   margin-top: 2rem;
 }
 .header-banner {
+  transform: translateY(5rem);
+}
+.header p {
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+/* 
+=============
+FAQ
+=============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+.faq-section {
+  font-family: 'Poppins', sans-serif;
+  background-color: #133667;
+  padding: 60px 0;
+  text-align: center;
+  background-position: bottom right 0%;
+}
+
+.faq-section .faq_left_half_circle {
+  position: absolute;
+  left: 80px;
+}
+
+.faq-section .faq_left_half_circle img {
+  position: relative;
+  top: 140px;
+}
+
+.faq-section h3 {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 30px;
+  margin: 0px;
+}
+
+.faq-section .faq-accordions {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq-section .faq-accordions .accordion-row {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #3566ac;
+  cursor: pointer;
+}
+
+.faq-section .faq-accordions .accordion-row .title {
+  text-align: left;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  position: relative;
+  padding-right: 30px;
+}
+
+.faq-section .faq-accordions .title:after {
+  content: '';
+  position: absolute;
+  border-left: #fff 2px solid;
+  border-bottom: #fff 2px solid;
+  right: 10px;
+  top: 8px;
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  width: 10px;
+  height: 10px;
+  z-index: 1;
+  transform: rotate(-45deg);
+}
+
+.faq-section .faq-accordions .title.open:after {
+  transform: rotate(135deg);
+  top: 14px;
+}
+
+.faq-section .faq-accordions .accordion-row .content {
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  overflow: hidden;
+  height: 0px;
+  transition: 0.5s all;
+}
+
+.faq-section .faq-accordions .accordion-row .open + .content {
+  height: auto;
+  overflow: initial;
+  padding: 20px 0px;
+}
+@media (max-width: 1200px) {
+  .faq-section .faq-accordions .accordion-row .title {
+    font-size: 18px;
+  }
+}
+
+/* 
+=================
+benefit
+================= 
+*/
+.benefit-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)) ;
+  
+   /* grid-template-columns: 1fr 1fr 1fr; */
+  column-gap: 3rem;
+}
+.benefit {
+  padding: 3rem;
+  border: 1px solid black;
+  margin-bottom: 2rem;
 }
