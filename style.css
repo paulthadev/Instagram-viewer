@@ -31,16 +31,14 @@ body {
   font-size: 1.5rem;
   color: var(--grey-dark);
 }
-section {
-  /* margin: 10rem 0; */
-}
+
 .section-center {
   padding: 8rem;
   margin: 0 auto;
 }
-@media screen and (max-width:75em){
+@media screen and (max-width: 75em) {
   .section-center {
-     padding: 3rem;
+    padding: 3rem;
   }
 }
 h1 {
@@ -63,7 +61,6 @@ p {
   padding-bottom: 2rem;
   text-align: center;
   color: #898282;
-
 }
 .btn {
   padding: 0.6rem 0.8rem;
@@ -96,22 +93,24 @@ search form
   transform: translateY(-50%);
   width: 30px;
   background-color: #0195f5;
-  padding: 3rem;
+  padding: 1.7rem 2.7rem;
   border-radius: 5px;
   color: #fff;
   transition: all 0.3s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
 
 .image:hover {
-  /* background-color: #2f52ff;
-   */
   filter: brightness(80%);
 }
 
 .input {
   background-color: #f2f2f2;
   border: none;
-  padding: 3rem;
+  padding: 2.5rem;
   padding-right: 5rem; /* text and image don't overlap */
   font-size: 20px;
   width: 70vw;
@@ -127,20 +126,45 @@ navbar
 */
 nav {
   display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 5rem;
+  padding: 2rem;
 }
+.logo {
+  color: white;
+  font-size: 3rem;
+}
+.logo span {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.language {
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 0.3rem;
+}
+.fa-globe {
+  font-size: 1.7rem;
+}
+
 /* 
 =================
 header
 ================= 
 */
 .header {
-  background-color: blue;
+  /* background-color: blue; */
   height: 80vh;
   padding: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -5rem;
+  margin-top: -9rem;
   background-image: url('./img/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -261,10 +285,10 @@ benefit
 */
 
 .section-benefit p {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
-@media screen and (max-width:70rem){
+@media screen and (max-width: 70rem) {
   .section-benefit p {
     width: 100%;
   }
@@ -285,11 +309,39 @@ benefit
   border-image: linear-gradient(to right, #ffa557, #e35185) 1;
 }
 
-
 .benefit span {
-   font-size: 8rem;
-   background: -webkit-gradient(linear, left top, left bottom, from(#ffa557), to(#e35185));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  font-size: 8rem;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ffa557),
+    to(#e35185)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 2rem;
+}
+
+/* 
+=================
+story-details
+================= 
+*/
+.story-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  row-gap: 3rem;
+}
+.number {
+  font-size: 5rem;
+  /* display:block; */
+  color:#FFA195;
+  grid-row: 1/span 2;
+  
 }
