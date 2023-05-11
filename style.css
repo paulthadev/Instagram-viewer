@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 /* 
 =================
 variables
@@ -25,6 +26,11 @@ default syles
 html {
   font-size: 62.5%;
 }
+@media screen and (max-width: 70rem) {
+  html {
+    font-size: 50%;
+  }
+}
 body {
   line-height: 1.5;
   font-family: var(--font-family);
@@ -47,17 +53,25 @@ h1 {
   text-align: center;
   margin-bottom: 3rem;
 }
+@media screen and (max-width: 1500px) {
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    line-height: 1.2;
+    letter-spacing: 0.2rem;
+  }
+}
 h2 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 3rem;
 }
+
 h3 {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 p {
-  /* color: white; */
   padding-bottom: 2rem;
   text-align: center;
   color: #898282;
@@ -76,49 +90,6 @@ p {
 .btn:hover {
   background-color: var(--btn-hover);
 }
-
-/* 
-=================
-search form
-=================  
-*/
-.field {
-  position: relative;
-  display: inline-block;
-}
-.image {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  background-color: #0195f5;
-  padding: 1.7rem 2.7rem;
-  border-radius: 5px;
-  color: #fff;
-  transition: all 0.3s ease-in;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-}
-
-.image:hover {
-  filter: brightness(80%);
-}
-
-.input {
-  background-color: #f2f2f2;
-  border: none;
-  padding: 2.5rem;
-  padding-right: 5rem; /* text and image don't overlap */
-  font-size: 20px;
-  width: 70vw;
-}
-.input:focus {
-  outline: none;
-  box-shadow: 0 3px 35px rgba(47, 82, 255, 0.73);
-}
 /* 
 =================
 navbar
@@ -127,18 +98,20 @@ navbar
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: transparent;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   height: 5rem;
-  padding: 2rem;
+  padding: 4rem;
 }
 .logo {
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 0;
 }
 .logo span {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 .language {
@@ -158,8 +131,7 @@ header
 ================= 
 */
 .header {
-  /* background-color: blue; */
-  height: 80vh;
+  height: 70vh;
   padding: 6rem;
   display: flex;
   justify-content: center;
@@ -169,6 +141,13 @@ header
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media screen and (max-width: 900px) {
+  .header {
+    height: 50vh;
+  }
+}
+
 .header .btn {
   text-align: left;
   margin-top: 2rem;
@@ -182,12 +161,135 @@ header
   text-align: center;
   color: white;
 }
+@media screen and (max-width: 650px) {
+  .btn-buttons {
+    display: none;
+  }
+}
+
+/* 
+=================
+search form
+=================  
+*/
+.field {
+  position: relative;
+  width: 65vw;
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  .field {
+    width: 90vw;
+  }
+}
+
+.image {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: #0195f5;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 3px;
+  color: #fff;
+  transition: all 0.3s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.image:hover {
+  filter: brightness(80%);
+}
+
+.input {
+  background-color: #f2f2f2;
+  border: none;
+  padding: 3rem;
+  padding-right: 0;
+  font-size: 1.5rem;
+  /* padding-right: 5rem; text and image don't overlap */
+  font-size: 20px;
+  width: 100%;
+}
+.input:focus {
+  outline: none;
+  box-shadow: 0 3px 35px rgba(47, 82, 255, 0.73);
+}
+/* 
+=================
+benefit
+================= 
+*/
+
+.section-benefit p {
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 70rem) {
+  .section-benefit p {
+    width: 100%;
+  }
+}
+.benefit-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  column-gap: 3rem;
+  margin-bottom: 7rem;
+}
+.benefit {
+  padding: 3rem;
+  margin-bottom: 2rem;
+  border-width: 2px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-image: linear-gradient(to right, #ffa557, #e35185) 1;
+}
+
+.benefit span {
+  font-size: 8rem;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ffa557),
+    to(#e35185)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+/* 
+=================
+story-details
+================= 
+*/
+.story-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  row-gap: 3rem;
+}
+.number {
+  font-size: 5rem;
+  color: #ffa195;
+  grid-row: 1 / span 2;
+}
+
+
 /* 
 =============
 FAQ
 =============
 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 .faq-section {
   font-family: 'Poppins', sans-serif;
@@ -278,70 +380,3 @@ FAQ
   }
 }
 
-/* 
-=================
-benefit
-================= 
-*/
-
-.section-benefit p {
-  width: 80%;
-  margin: 0 auto;
-}
-@media screen and (max-width: 70rem) {
-  .section-benefit p {
-    width: 100%;
-  }
-}
-.benefit-center {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  column-gap: 3rem;
-}
-.benefit {
-  padding: 3rem;
-  margin-bottom: 2rem;
-  border-width: 2px;
-  border-style: solid;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-image: linear-gradient(to right, #ffa557, #e35185) 1;
-}
-
-.benefit span {
-  font-size: 8rem;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#ffa557),
-    to(#e35185)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 2rem;
-}
-
-/* 
-=================
-story-details
-================= 
-*/
-.story-details {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.detail {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 1rem;
-  row-gap: 3rem;
-}
-.number {
-  font-size: 5rem;
-  /* display:block; */
-  color:#FFA195;
-  grid-row: 1/span 2;
-  
-}
