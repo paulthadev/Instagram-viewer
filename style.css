@@ -14,7 +14,7 @@ variables
 
 /* 
 =================
-default syles
+default styles
 ================= 
 */
 
@@ -292,8 +292,12 @@ benefit
     gap: 4rem;
   }
 
-  .section-benefit p {
+  .section-benefit > p {
     text-align: center;
+  }
+
+  .benefit-info > p {
+    text-align: left;
   }
   h3 {
     text-align: left;
@@ -491,7 +495,7 @@ FAQ
 
 /* 
 =============
-bottmon text
+bottom text
 =============
 */
 .main-bottom {
